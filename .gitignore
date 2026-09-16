@@ -1,0 +1,12 @@
+# Local media and model data are too large and may be client-owned.
+media/
+models/
+cache/
+experiments/*/.venv/
+experiments/*/venv/
+experiments/*/.cache/
+*.pyc
+__pycache__/
+
+# Keep reproducible logs and reference analysis under version control.
+outputs/*/raw/
