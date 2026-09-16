@@ -67,3 +67,12 @@ D:\KuroCut\experiments\FunClip\.venv\Scripts\python -m yt_dlp --ffmpeg-location 
 - 发现：SenseVoice 路径未配置 punc model 时跳过句级分段，当前 SRT 可用但字幕断句质量待核；另有一次直接调用缺少 `VideoClipper.lang`，已通过调用侧设置修复，未改第三方源码
 
 未自动裁切的待补结束时间：`お金ない`、`実際に使ってみる`、`待機モーション`、`脅かす系彼氏`、`待機モーション2`、`おまけ`。`待機モーション2` 的 `4:04:14 4:05:00 4:05:50` 也需要确认哪个是结束点。
+
+## 2026-09-16：基础理解字幕样片
+
+- 原因：阶段 0 只验证源抓取、裁切和 ASR；FunClip 不会自动复现参考图中的动效，参考图也没有被实现为模板。
+- 日语 ASR 当前缺少可靠句级时间戳，原始 SRT 几乎是一整段，不能直接烧录成可读字幕。
+- 已生成基于 ASR 草稿的中文理解字幕：`D:\KuroCut\media\work\stage0-001\transcript.zh.srt`
+- 已生成硬字幕样片：`D:\KuroCut\media\work\stage0-001\stage0-001-hajimari-zh-hard.mkv`
+- 字幕样式：白字、黑描边、底部居中；视频使用 RTX 5080 的 NVENC 编码，原声保留。
+- 该中文版本是“理解草稿”，按语义段落铺时，不把未经人工核对的 ASR 当成最终翻译。下一步先由用户检查是否能读懂，再决定是否为 20 条片段逐条翻译/烧录。
