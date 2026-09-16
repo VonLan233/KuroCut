@@ -33,6 +33,20 @@
 - Torchaudio：`2.11.0+cu128`
 - GPU 验证：`torch.cuda.is_available() = True`，识别 RTX 5080
 - 本地 FFmpeg：`...\.venv\Lib\site-packages\imageio_ffmpeg\binaries\ffmpeg-win-x86_64-v7.1.exe`
+- yt-dlp：`2026.08.19`，安装在同一独立环境
+- 素材目录：`D:\KuroCut\media\incoming`、`source`、`samples`、`work`；这些目录已加入 Git 忽略范围
+
+### 源视频工作流准备
+
+下载和简单裁切均在 Windows 远端执行；源文件不覆盖，裁切只写入 `media\samples`。链接到位后可使用：
+
+```bat
+set "KURO_FFMPEG=D:\KuroCut\experiments\FunClip\.venv\Lib\site-packages\imageio_ffmpeg\binaries\ffmpeg-win-x86_64-v7.1.exe"
+D:\KuroCut\experiments\FunClip\.venv\Scripts\python -m yt_dlp --ffmpeg-location "%KURO_FFMPEG%" -o "D:\KuroCut\media\source\%%(upload_date)s_%%(id)s.%%(ext)s" "<URL>"
+"%KURO_FFMPEG%" -ss 00:10:00 -to 00:11:30 -i "D:\KuroCut\media\source\<file>" -map 0 -c copy "D:\KuroCut\media\samples\sample-90s.mkv"
+```
+
+当前未访问链接、未下载视频；等待用户提供源视频链接和需要的时间段/场次。
 
 ### 未测与下一步
 
