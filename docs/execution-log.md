@@ -46,13 +46,24 @@ D:\KuroCut\experiments\FunClip\.venv\Scripts\python -m yt_dlp --ffmpeg-location 
 "%KURO_FFMPEG%" -ss 00:10:00 -to 00:11:30 -i "D:\KuroCut\media\source\<file>" -map 0 -c copy "D:\KuroCut\media\samples\sample-90s.mkv"
 ```
 
-当前未访问链接、未下载视频；等待用户提供源视频链接和需要的时间段/场次。
-
 ### 未测与下一步
 
-- 缺少 A 场 60–90 秒日语小样和 10–20 分钟回放，故未声称 ASR、时间戳、字幕导出或粗剪通过。
-- 系统 PATH 没有独立 FFmpeg；当前可先用环境内置二进制，真实素材测试时确认 FunClip 的调用路径。
+- 已有 A 场源和 90 秒/14 分钟样片；SenseVoice 识别与 SRT 输出已通过首次冒烟，但日语断句、完整 10–20 分钟 FunClip 粗剪和字幕对齐仍待核。
+- 系统 PATH 没有独立 FFmpeg；已用环境内置二进制完成下载合并和本地裁切。
 - 未发现 Premiere Pro 版本，PR 工程验收保持未完成。
-- 收到小样后先运行 FunClip 原生识别/字幕/粗剪，再补实际输出路径、时长、音轨、日语字体和失败原因。
+- 下一步：核对 SRT 与原声、运行 14 分钟样片的 FunClip 流程，再决定是否补 punc 模型或提高源分辨率。
 
 官方依据：FunClip [v2.2.1 源码与安装说明](https://github.com/modelscope/FunClip)；PyTorch [Windows CUDA 安装说明](https://pytorch.org/get-started/locally/)。
+
+## 2026-09-16：A 场源抓取与阶段 0 冒烟
+
+- 源 URL：`https://www.youtube.com/watch?v=_IDj48tRiXc`
+- yt-dlp 配置：`--ignore-config`（绕过远端失效的 `127.0.0.1:7890` 代理配置）、视频 `135`（854×480 H.264/30fps）+ 音频 `251`（Opus）
+- 源文件：`D:\KuroCut\media\source\20260911_IDj48tRiXc.mkv`，5:05:08.05，1,716,312,183 bytes
+- 源 SHA256：`41b4fce5795c210c104ee820aa8f28581e2f65e18f3b67182654f8f4f9c1bf0b`
+- 阶段 0 样片：`stage0-000-90s.mkv`、`stage0-001-hajimari.mkv`、`stage0-002-trailer-pv.mkv`，均含视频和原声
+- 已按明确起止时间生成 20 条素材：`D:\KuroCut\media\work\clips\001-*.mkv` 至 `020-*.mkv`；无损流复制，未重编码
+- SenseVoiceSmall：对 `stage0-001-hajimari.mkv` 识别成功，输出 `D:\KuroCut\media\work\stage0-001\transcript.txt` 与 `transcript.srt`；文本 717 字符、SRT 751 字符，推理日志显示 rtf 约 0.053
+- 发现：SenseVoice 路径未配置 punc model 时跳过句级分段，当前 SRT 可用但字幕断句质量待核；另有一次直接调用缺少 `VideoClipper.lang`，已通过调用侧设置修复，未改第三方源码
+
+未自动裁切的待补结束时间：`お金ない`、`実際に使ってみる`、`待機モーション`、`脅かす系彼氏`、`待機モーション2`、`おまけ`。`待機モーション2` 的 `4:04:14 4:05:00 4:05:50` 也需要确认哪个是结束点。
