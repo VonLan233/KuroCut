@@ -1,0 +1,1 @@
+[0:v]subtitles='D\:/KuroCut/media/work/sample-review-2026-09-17/pv-review-27-138.review.srt':force_style='FontName=Microsoft YaHei,FontSize=20,PrimaryColour=&H00FFFFFF,OutlineColour=&H00000000,BorderStyle=1,Outline=3,Shadow=0,Alignment=2,MarginV=35'[v]

@@ -76,3 +76,13 @@ D:\KuroCut\experiments\FunClip\.venv\Scripts\python -m yt_dlp --ffmpeg-location 
 - 已生成硬字幕样片：`D:\KuroCut\media\work\stage0-001\stage0-001-hajimari-zh-hard.mkv`
 - 字幕样式：白字、黑描边、底部居中；视频使用 RTX 5080 的 NVENC 编码，原声保留。
 - 该中文版本是“理解草稿”，按语义段落铺时，不把未经人工核对的 ASR 当成最终翻译。下一步先由用户检查是否能读懂，再决定是否为 20 条片段逐条翻译/烧录。
+
+## 2026-09-17：PV 片段句级时间戳对照
+
+- 远端在同一 FunClip venv 补装 `faster-whisper`，使用本地 `small` 日语模型和 RTX 5080。
+- 受控范围：`stage0-002-trailer-pv.mkv` 原片 00:27–02:18；输入先解码为 16 kHz 单声道音频，模型时间加回 27 秒源偏移。
+- 输出：`D:\KuroCut\media\work\sample-review-2026-09-17\pv-review-27-138.faster-whisper.json`、`pv-review-27-138.review.srt`。
+- 结果：42 个句段，语言识别为 `ja`，概率 1.0；前段出现“冷静→惊叹→好帅→观察动作”，后段出现白发、父亲等候选语义。
+- 约一半中文只保留“待翻译／待核”，专名、PV 台词来源和含混句不自动定稿；这证明本地小模型适合生成带时间的初稿，不足以取消人工验收。
+- 审稿硬字幕：`D:\KuroCut\media\work\sample-review-2026-09-17\pv-review-27-138-zh-hard.mkv`，已抽帧确认字幕显示、原声保留。
+- 脚本：`outputs/sample-review-2026-09-17/timestamp_transcribe.py`。本轮未覆盖原有 SenseVoice 结果或源视频。
