@@ -1,0 +1,17 @@
+{
+  "stage0-000-90s.mkv": {
+    "first_90s_pcm_sha256": "013bac57b9ebaf20981ff5533ee3b50aaf8a71accffb6deb0642e0d6b6b34436",
+    "decoded_bytes": 5760000,
+    "file_bytes": 10218470
+  },
+  "stage0-001-hajimari.mkv": {
+    "first_90s_pcm_sha256": "013bac57b9ebaf20981ff5533ee3b50aaf8a71accffb6deb0642e0d6b6b34436",
+    "decoded_bytes": 5760000,
+    "file_bytes": 17698883
+  },
+  "stage0-002-trailer-pv.mkv": {
+    "first_90s_pcm_sha256": "b83bbc401c19eb25f2d474c62a2df0f2db25dc126e2cad127f45e1794ec265ba",
+    "decoded_bytes": 5760000,
+    "file_bytes": 60233025
+  }
+}

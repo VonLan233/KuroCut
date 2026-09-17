@@ -1,0 +1,10 @@
+[
+  {
+    "path": "D:\\KuroCut\\media\\samples\\stage0-001-hajimari.mkv",
+    "probe": "Input #0, matroska,webm, from 'D:\\KuroCut\\media\\samples\\stage0-001-hajimari.mkv':\r\n  Metadata:\r\n    MINOR_VERSION   : 0\r\n    COMPATIBLE_BRANDS: iso6avc1mp41\r\n    MAJOR_BRAND     : dash\r\n    ENCODER         : Lavf61.7.100\r\n  Duration: 00:02:34.08, start: -0.007000, bitrate: 918 kb/s\r\n  Stream #0:0: Video: h264 (Main), yuv420p(tv, bt709, progressive), 854x480 [SAR 1:1 DAR 427:240], 30 fps, 30 tbr, 1k tbn (default)\r\n      Metadata:\r\n        HANDLER_NAME    : ISO Media file produced by Google Inc.\r\n        VENDOR_ID       : [0][0][0][0]\r\n        DURATION        : 00:02:34.078000000\r\n  Stream #0:1(eng): Audio: opus, 48000 Hz, stereo, fltp (default)\r\n      Metadata:\r\n        DURATION        : 00:02:34.020000000\r\nAt least one output file must be specified\r\n"
+  },
+  {
+    "path": "D:\\KuroCut\\media\\work\\stage0-001\\stage0-001-hajimari-zh-hard.mkv",
+    "probe": "[h264 @ 0000022e429e0bc0] Increasing reorder buffer to 2\r\nInput #0, matroska,webm, from 'D:\\KuroCut\\media\\work\\stage0-001\\stage0-001-hajimari-zh-hard.mkv':\r\n  Metadata:\r\n    MAJOR_BRAND     : dash\r\n    MINOR_VERSION   : 0\r\n    COMPATIBLE_BRANDS: iso6avc1mp41\r\n    ENCODER         : Lavf61.7.100\r\n  Duration: 00:02:34.10, start: 0.000000, bitrate: 2416 kb/s\r\n  Stream #0:0: Video: h264 (Main), yuv420p(tv, bt709, progressive), 854x480 [SAR 1:1 DAR 427:240], 30 fps, 30 tbr, 1k tbn (default)\r\n      Metadata:\r\n        HANDLER_NAME    : ISO Media file produced by Google Inc.\r\n        VENDOR_ID       : [0][0][0][0]\r\n        ENCODER         : Lavc61.19.100 h264_nvenc\r\n        DURATION        : 00:02:34.100000000\r\n  Stream #0:1(eng): Audio: opus, 48000 Hz, stereo, fltp (default)\r\n      Metadata:\r\n        DURATION        : 00:02:34.027000000\r\nAt least one output file must be specified\r\n"
+  }
+]

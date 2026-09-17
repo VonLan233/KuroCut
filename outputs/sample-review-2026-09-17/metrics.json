@@ -1,0 +1,139 @@
+{
+  "transcript.srt": {
+    "cue_count": 1,
+    "cues": [
+      {
+        "id": 1,
+        "start": 0.45,
+        "end": 153.969,
+        "duration": 153.519,
+        "chars": 717,
+        "chars_per_second": 4.67
+      }
+    ]
+  },
+  "transcript.zh.srt": {
+    "cue_count": 12,
+    "cues": [
+      {
+        "id": 1,
+        "start": 0.5,
+        "end": 8.0,
+        "duration": 7.5,
+        "chars": 16,
+        "chars_per_second": 2.13
+      },
+      {
+        "id": 2,
+        "start": 8.0,
+        "end": 18.0,
+        "duration": 10.0,
+        "chars": 12,
+        "chars_per_second": 1.2
+      },
+      {
+        "id": 3,
+        "start": 18.0,
+        "end": 30.0,
+        "duration": 12.0,
+        "chars": 25,
+        "chars_per_second": 2.08
+      },
+      {
+        "id": 4,
+        "start": 30.0,
+        "end": 41.0,
+        "duration": 11.0,
+        "chars": 23,
+        "chars_per_second": 2.09
+      },
+      {
+        "id": 5,
+        "start": 41.0,
+        "end": 53.0,
+        "duration": 12.0,
+        "chars": 18,
+        "chars_per_second": 1.5
+      },
+      {
+        "id": 6,
+        "start": 53.0,
+        "end": 66.0,
+        "duration": 13.0,
+        "chars": 29,
+        "chars_per_second": 2.23
+      },
+      {
+        "id": 7,
+        "start": 66.0,
+        "end": 79.0,
+        "duration": 13.0,
+        "chars": 23,
+        "chars_per_second": 1.77
+      },
+      {
+        "id": 8,
+        "start": 79.0,
+        "end": 92.0,
+        "duration": 13.0,
+        "chars": 20,
+        "chars_per_second": 1.54
+      },
+      {
+        "id": 9,
+        "start": 92.0,
+        "end": 105.0,
+        "duration": 13.0,
+        "chars": 22,
+        "chars_per_second": 1.69
+      },
+      {
+        "id": 10,
+        "start": 105.0,
+        "end": 114.0,
+        "duration": 9.0,
+        "chars": 22,
+        "chars_per_second": 2.44
+      },
+      {
+        "id": 11,
+        "start": 114.0,
+        "end": 123.0,
+        "duration": 9.0,
+        "chars": 21,
+        "chars_per_second": 2.33
+      },
+      {
+        "id": 12,
+        "start": 123.0,
+        "end": 153.5,
+        "duration": 30.5,
+        "chars": 21,
+        "chars_per_second": 0.69
+      }
+    ]
+  },
+  "raw_tags": {
+    "line_count": 58,
+    "language_tags": {
+      "zh": 3,
+      "ja": 45,
+      "en": 8,
+      "nospeech": 1,
+      "ko": 1
+    },
+    "emotion_tags": {
+      "EMO_UNKNOWN": 58
+    },
+    "note": "Raw records have no timestamps; their order is not established as chronological."
+  },
+  "transcript": {
+    "characters": 717,
+    "phrase_counts": {
+      "やばい": 10,
+      "待って": 6,
+      "どうしよう": 3,
+      "こんばんは": 4
+    }
+  }
+}
