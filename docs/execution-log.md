@@ -86,3 +86,11 @@ D:\KuroCut\experiments\FunClip\.venv\Scripts\python -m yt_dlp --ffmpeg-location 
 - 约一半中文只保留“待翻译／待核”，专名、PV 台词来源和含混句不自动定稿；这证明本地小模型适合生成带时间的初稿，不足以取消人工验收。
 - 审稿硬字幕：`D:\KuroCut\media\work\sample-review-2026-09-17\pv-review-27-138-zh-hard.mkv`，已抽帧确认字幕显示、原声保留。
 - 脚本：`outputs/sample-review-2026-09-17/timestamp_transcribe.py`。本轮未覆盖原有 SenseVoice 结果或源视频。
+
+## 2026-09-17：OpenCode Contributor Free 与 Muse 重做
+
+- 远端 OpenCode：`1.18.31`；`opencode/muse-spark-1.3-contributor-free` 出现在模型列表，环境变量认证可用，连通性测试返回 `MUSE_CONNECTED`。
+- Muse 读取 PV JSON、旧报告、音频能量和抽帧证据，修订 `pv-review-27-138.faster-whisper.json`：42 段变为 44 段，补回两处高能量喊声，所有不确定语义保留待核说明；JSON 单调性验证通过。
+- 基于修订 JSON 重新生成 `pv-review-27-138.muse-zh.srt` 与 `pv-review-27-138-muse-zh-hard.mkv`；远端抽帧确认双语字幕显示。
+- 项目根新增 `opencode.json`，默认模型固定为 `opencode/muse-spark-1.3-contributor-free`；不保存 API Key。
+- 高级“一步成片”路线见 `docs/2026-09-17-advanced-one-step-video-workflow.md`：一步触发、分层执行、可恢复、可生成审稿 MP4 和 PR 交换时间线。
