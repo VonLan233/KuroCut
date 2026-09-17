@@ -94,3 +94,14 @@ D:\KuroCut\experiments\FunClip\.venv\Scripts\python -m yt_dlp --ffmpeg-location 
 - 基于修订 JSON 重新生成 `pv-review-27-138.muse-zh.srt` 与 `pv-review-27-138-muse-zh-hard.mkv`；远端抽帧确认双语字幕显示。
 - 项目根新增 `opencode.json`，默认模型固定为 `opencode/muse-spark-1.3-contributor-free`；不保存 API Key。
 - 高级“一步成片”路线见 `docs/2026-09-17-advanced-one-step-video-workflow.md`：一步触发、分层执行、可恢复、可生成审稿 MP4 和 PR 交换时间线。
+
+## 2026-09-17：PV 双语字幕与动效样片
+
+- 选段：`stage0-002-trailer-pv.mkv` 原片 00:27–01:14，约 47 秒。
+- 远端成片：`D:\KuroCut\media\work\sample-review-2026-09-17\pv-effects-sample.mkv`。
+- 构图：输出竖屏 720×1280；原画面居中，背景放大、虚化并压暗，保留主播与 PV 主体。
+- 字幕：使用 ASS 双语硬字幕；普通台词保留日语/中文两行，待核内容显式标记，不覆盖原始 JSON 和旧审稿版本。
+- 动效：标题层、黄色重点词弹入缩放、红色尖叫强调、黄色反应文字上浮旋转淡出、顶部待核提示。
+- 编码：RTX 5080 `h264_nvenc`，音频重新编码为 AAC；完整解码通过，已抽查 5 秒和 21 秒画面。
+- ASS 与滤镜脚本：`outputs/sample-review-2026-09-17/pv-effects.ass`、`effects-filter.txt`。
+- 这是第一版真实素材动效验证，不声称逐帧复刻 reference；下一步应看完整播放节奏，再调字幕字号、位置和待核信息的显示方式。

@@ -1,0 +1,1 @@
+[0:v]split=2[bg][fg];[bg]scale=720:1280:force_original_aspect_ratio=increase,crop=720:1280,gblur=sigma=22,eq=brightness=-0.28[bg2];[fg]scale=720:-2[fg2];[bg2][fg2]overlay=(W-w)/2:(H-h)/2[base];[base]subtitles='D\:/KuroCut/media/work/sample-review-2026-09-17/pv-effects.ass'[v]

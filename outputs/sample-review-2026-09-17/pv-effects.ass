@@ -1,0 +1,28 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 720
+PlayResY: 1280
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,31,&H00FFFFFF,&H00FFFFFF,&H00000000,&H96000000,0,0,0,0,100,100,0,0,1,3,0,2,38,38,118,1
+Style: Title,Microsoft YaHei,25,&H00FFFFFF,&H00FFFFFF,&H00303030,&H96000000,1,0,0,0,100,100,0,0,1,2,0,7,32,32,42,1
+Style: Emphasis,Microsoft YaHei,52,&H0000D7FF,&H0000D7FF,&H00000000,&H96000000,1,0,0,0,100,100,0,-5,1,4,1,2,30,30,250,1
+Style: Shock,Microsoft YaHei,62,&H003C3CFF,&H003C3CFF,&H00FFFFFF,&H96000000,1,0,0,0,100,100,0,0,1,4,1,5,30,30,30,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 5,0:00:00.00,0:00:03.00,Title,,0,0,0,,PV反应测试  /  KuroCut初版
+Dialogue: 0,0:00:00.00,0:00:01.00,Default,,0,0,0,,こっち！\N这边！（待核）
+Dialogue: 0,0:00:02.50,0:00:04.00,Default,,0,0,0,,落ち着いて！大丈夫！\N冷静，没事！
+Dialogue: 2,0:00:04.20,0:00:05.70,Emphasis,,0,0,0,,{\fad(120,120)\t(0,320,\fscx125\fscy125)}ついに！\N终于等到了！（待核）
+Dialogue: 3,0:00:05.45,0:00:07.70,Shock,,0,0,0,,{\fad(80,260)\t(0,260,\frz-8\fscx115\fscy115)}あ゛あ゛あ゛あ゛あ゛！\N啊——！（尖叫／欢呼，待核）
+Dialogue: 0,0:00:07.70,0:00:09.50,Default,,0,0,0,,え、なんで汗かいてんの？\N诶，怎么出汗了？
+Dialogue: 0,0:00:09.50,0:00:10.50,Default,,0,0,0,,何も！\N没什么！
+Dialogue: 1,0:00:20.50,0:00:24.00,Emphasis,,0,0,0,,{\move(170,930,530,790,0,1500)\fad(100,450)\frz6}かっこいい！\N好帅！好帅！
+Dialogue: 0,0:00:24.00,0:00:25.00,Default,,0,0,0,,顔やばいな！\N这张脸不得了……（语气待核）
+Dialogue: 0,0:00:30.00,0:00:35.00,Default,,0,0,0,,あ、大丈夫かな？この動きはね……\N啊，没事吗？这个动作……（待核）
+Dialogue: 2,0:00:41.00,0:00:43.00,Emphasis,,0,0,0,,{\fad(100,250)\t(0,250,\fscx112\fscy112)}サンズの川？\N“三途の川”？（待核）
+Dialogue: 0,0:00:44.00,0:00:47.00,Default,,0,0,0,,そうだよね、ジンナンくんの……\N对吧，ジンラン君的……（人名待核）
+Dialogue: 5,0:00:45.00,0:00:47.00,Title,,0,0,0,,{\fad(120,500)\c&H00FFFF&}待核：人名／PV台词归属
